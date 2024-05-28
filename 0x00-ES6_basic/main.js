@@ -1,2 +1,7 @@
-import { taskFirst, taskNext } from './0-constants.js';
-console.log(`${taskFirst()} ${taskNext()}`);
+#!/usr/bin/env node
+import getFullBudgetObject from './9-getFullBudget.js';
+
+const fullBudget = getFullBudgetObject(20, 50, 10);
+
+console.log(fullBudget.getIncomeInDollars(fullBudget.income));
+console.log(fullBudget.getIncomeInEuros(fullBudget.income));
