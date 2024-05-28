@@ -1,5 +1,5 @@
 export default function createIteratorObject(report) {
-  employees = [];
+  const employees = [];
   for (const employee of Object.values(report.allEmployees)) {
     employees.push(employee);
   };
