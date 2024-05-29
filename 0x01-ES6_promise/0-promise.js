@@ -1,1 +1,1 @@
-conat getResponseFromAPI = new Promise()
+export default getResponseFromAPI = new Promise((resolve, reject) => {})
