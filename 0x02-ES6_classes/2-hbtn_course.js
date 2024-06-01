@@ -33,7 +33,7 @@ export default class HolbertonCourse {
     if (!Number.isInteger(newLength)) {
       throw new TypeError('Length must be a number');
     }
-      
+
     this._length = newLength;
   }
 
