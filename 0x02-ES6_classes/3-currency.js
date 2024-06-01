@@ -19,4 +19,8 @@ export default class Currency {
   set string(newString) {
     this._string = newString;
   }
+
+  displayFullCurrency() {
+    return `${this._string} (${this._code})`;
+  }
 }
