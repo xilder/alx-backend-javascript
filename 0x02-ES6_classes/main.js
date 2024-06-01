@@ -1,9 +1,13 @@
-import Pricing from './4-pricing.js';
-import Currency from './3-currency.js';
+import Building from './5-building.js';
 
-const dollar = new Currency('$', 'Dollars');
-const price = new Pricing(100, dollar);
-console.log(price.amount)
-console.log(price.currency)
-console.log(price.displayFullPrice())
+const b = new Building(100);
+console.log(b);
 
+class TestBuilding extends Building {}
+
+try {
+    new TestBuilding(200)
+}
+catch(err) {
+    console.log(err);
+}
