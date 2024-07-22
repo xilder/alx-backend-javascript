@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 const getName = () => {
   return new Promise((resolve, reject) => {
     process.stdout.write('Welcome to Holberton School, what is your name?\n');
