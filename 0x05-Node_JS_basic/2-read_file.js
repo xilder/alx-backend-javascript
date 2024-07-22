@@ -18,9 +18,9 @@ const countStudents = (path) => {
     console.log(`Number of students: ${lines.length}`);
     for (const key of Object.keys(objData)) {
       console.log(
-        `Number of students in ${key}: ${
-          objData[key].length
-        }. List: ${objData[key].join(', ')}\n`
+        `Number of students in ${key}: ${objData[key].length}. List: ${objData[
+          key
+        ].join(', ')}`
       );
     }
   } catch (err) {
