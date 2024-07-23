@@ -44,13 +44,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', async (req, res) => {
-    const title = 'This is the list of out students'
-    try {
-        const students = await countStudents(process.argv[2])
-        res.send(`${title}\n${students}`)
-    } catch (error) {
-        res.send(`${title}\n${error.message}`)
-    }
+  const title = 'This is the list of out students';
+  try {
+    const students = await countStudents(process.argv[2]);
+    res.send(`${title}\n${students}`);
+  } catch (error) {
+    res.send(`${title}\n${error.message}`);
+  }
 });
 
 app.listen(port);
