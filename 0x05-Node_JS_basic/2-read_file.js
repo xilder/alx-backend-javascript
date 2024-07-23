@@ -1,4 +1,5 @@
 const fs = require('fs');
+
 const countStudents = (path) => {
   try {
     let lines = fs.readFileSync(path, 'utf8').toString().split('\n');
@@ -15,14 +16,16 @@ const countStudents = (path) => {
       objData[subject].push(lineArr[0]);
     }
     for (const key in objData) {
-      console.log(
-        `Number of students in ${key}: ${objData[key].length}. List: ${objData[
-          key
-        ].join(', ')}`
-      );
+      if (key) {
+        console.log(
+          `Number of students in ${key}: ${
+            objData[key].length
+          }. List: ${objData[key].join(', ')}`,
+        );
+      }
     }
   } catch (err) {
-    throw new Error('Cannot load the database');
+    throw Error('Cannot load the database');
   }
 };
 

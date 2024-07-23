@@ -21,11 +21,13 @@ const countStudents = (path) => {
           objData[subject].push(lineArr[0]);
         }
         for (const key in objData) {
-          console.log(
-            `Number of students in ${key}: ${
-              objData[key].length
-            }. List: ${objData[key].join(', ')}`
-          );
+          if (key) {
+            console.log(
+              `Number of students in ${key}: ${
+                objData[key].length
+              }. List: ${objData[key].join(', ')}`,
+            );
+          }
         }
       }
       res();
