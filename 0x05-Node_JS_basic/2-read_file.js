@@ -10,10 +10,11 @@ const countStudents = (path) => {
     for (const line of lines) {
       const lineArr = line.split(',');
       const subject = lineArr[3];
-      if (!objData[subject]) {
+      const firstName = line_arr[0]
+      if (firstName && subject && !objData[subject]) {
         objData[subject] = [];
       }
-      objData[subject].push(lineArr[0]);
+      objData[subject].push(firstName);
     }
     for (const key in objData) {
       if (key) {
