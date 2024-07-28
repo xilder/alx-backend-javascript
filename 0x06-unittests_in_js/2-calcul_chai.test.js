@@ -11,7 +11,7 @@ describe('2-calcul_chai.js', function () {
   it('should perform div op', function () {
   expect(calculateNumber('DIVIDE', 1.4, 4.5)).to.equal(0.2);
   });
-  it('should perform return 0 when div by 0', function () {
+  it('should return Error when div by 0', function () {
   expect(calculateNumber('DIVIDE', 1.4, 0)).to.equal('Error');
   });
 });
